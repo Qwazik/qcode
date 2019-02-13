@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "end": "git add . && git commit -m 'end' && git push && yarn deploy"
+    "end": "git add . && git commit -m 'end' && git push && vue-cli-service build && cd dist && git init && git checkout --orphan gh-pages && git add . && git commit -m 'deploy' && git remote add origin https://github.com/Qwazik/qcode.git && git push origin gh-pages"
   },
   "dependencies": {
     "register-service-worker": "^1.5.2",
